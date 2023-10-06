@@ -24,7 +24,7 @@ public class GetData {
     public int getInteger() {
 
         while (!getData.hasNextInt()) {
-            System.out.println("Not a number, try again. ");
+            System.out.println("\u001B[31m" + "Wrong input, try again... " + "\u001B[0m");
             getData.next();
         }
 

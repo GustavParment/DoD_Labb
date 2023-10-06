@@ -1,6 +1,9 @@
 package com.Gustav.DiceOrDie;
 
-import com.Gustav.DiceOrDie.GamePanel.Start;
+import com.Gustav.DiceOrDie.GamePanel.GameLogic;
+//import com.Gustav.DiceOrDie.GamePanel.Start;
+import com.Gustav.DiceOrDie.PlayerPanel.PlayerLogic;
+
 /**<font COLOR=#ffffff>
  * Dice or Die!
  * This is a die game where the users will roll for there lives.
@@ -13,13 +16,12 @@ import com.Gustav.DiceOrDie.GamePanel.Start;
 public class Main {
     public static void main(String[] args) {
 
-        new Start();
+       // new Start();
+
+        PlayerLogic play = new PlayerLogic();
+        GameLogic game = new GameLogic();
+
+        game.newGame(play);
     }
 }
-/**
- * Todo-Tester
- *  2 relevant unit tests
- *  Push it up in the GITT!!!!
- *  Enjoy life
- */
 

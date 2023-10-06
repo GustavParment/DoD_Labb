@@ -1,9 +1,11 @@
 package com.Gustav.DiceOrDie.PlayerPanel;
 
+
 /**<font COLOR=#ffffff>
  * The ScoreUtilities class is used for counting the score between players.
- * it contains 4 methods getHighestPlayerScore, getLowestPlayerScore and getWinnerScore
+ * it contains 4 methods getHighestPlayerScore(), displayScore(), getLowestScorePlayer() and getWinnerScore()
  * These are functions that calculates score the value.
+ * The displayScore() will simply display the scores in the console.
  *
  */
 public class ScoreUtilities {

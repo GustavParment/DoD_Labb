@@ -59,24 +59,33 @@ public class GameLogic {
 
         int highestScorePlayer = s.getHighestScorePlayer(score);
         int playersWithHighestScores = s.countPlayersWithScore(score, score[highestScorePlayer]);
+        int lowestScorePlayer = s.getLowestScorePlayer(score);
 
 
         if (playersWithHighestScores == 2) {
 
-            System.out.println("\u001B[32m" + "\nIt's a tie between 2 players re roll!"+"\u001B[0m");
-
+            System.out.println("\u001B[32m" + "\nIt's a tie between 2 players re-roll!" + "\u001B[0m");
 
             reRoll(playerNames, playerAmount, score);
 
 
         } else if (playersWithHighestScores > 2) {
-            System.out.println("\u001B[32m"+"It's a tie between multiple players re roll!"+ "\u001B[0m");
 
+            System.out.println("\u001B[32m" + "\nIt's a tie between multiple players re-roll!" + "\u001B[0m");
 
             reRoll(playerNames, playerAmount, score);
 
-        } else {
-            System.out.println(playerNames[highestScorePlayer] + " is the winner and will" +
+
+        }else if (playerAmount == 2){
+
+            System.out.println("\n" + playerNames[highestScorePlayer] + " is the winner and will "+"\u001b[31"
+                    +"execute " + playerNames[lowestScorePlayer] );
+
+
+
+        }else {
+
+            System.out.println("\n" + playerNames[highestScorePlayer] + " is the winner and will" +
                     "\u001b[31m" + " execute" + "\u001b[0m" + " the other players! ");
 
 
@@ -91,6 +100,8 @@ public class GameLogic {
 
         int highestScorePlayer = s.getHighestScorePlayer(score);
         int highestScore = score[highestScorePlayer];
+        int lowestScorePlayer = s.getLowestScorePlayer(score);
+
 
 
 
@@ -98,21 +109,33 @@ public class GameLogic {
 
             if (score[i] == highestScore){
 
-                System.out.println("\n"+playerNames[i] +
-                        " press "+"\u001B[36m" + "ENTER" + "\u001B[0m" + " to re roll");
+                System.out.print("\n"+playerNames[i] +
+                        " press "+"\u001B[36m" + "ENTER" + "\u001B[0m" + " to re-roll");
 
                 sc.getArray();
 
                 int diceRoll = dice.roll();
-                System.out.println(playerNames[i] + " rolled: " + diceRoll);
+                System.out.println("\n"+ playerNames[i] + " rolled: " + diceRoll);
                 score[i] += diceRoll;
 
 
             }
 
+        }if (playerAmount == 2){
+
+            System.out.println(playerNames[highestScore] + " is the winner and will "+"\u001b[31m"
+                    +"execute " + "\u001B[0m" + playerNames[lowestScorePlayer] );
+
+
+
+        }else {
+
+            System.out.println(playerNames[highestScorePlayer] + " is the winner and will" +
+                    "\u001b[31m" + " execute" + "\u001b[0m" + " the other players! ");
+
+
         }
-        System.out.println("\n" + playerNames[highestScorePlayer] + " is the final winner and will" + "\u001b[31m"
-                +" execute " + "\u001b[0m" + "the other players....." );
+
     }
 
 }

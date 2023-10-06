@@ -22,7 +22,9 @@ public class PlayerLogic {
         getPlayerNames();
 
     }
+
     public void getPlayerAmount(){
+
         do {
 
             System.out.print("Enter number of players: ");
@@ -38,6 +40,7 @@ public class PlayerLogic {
 
         } while (playerAmount >= 5 || playerAmount < 2);
     }
+
     public void getPlayerNames() {
 
         playerNames = new String[this.playerAmount];
@@ -54,7 +57,8 @@ public class PlayerLogic {
 
 
                 if (containsDigits) {
-                    System.out.println("\u001B[31m" + "That's a number, you can only enter letters for player name..." + "\u001B[0m");
+                    System.out.println("\u001B[31m" + "That's a number, you can only enter letters for player names..."
+                            + "\u001B[0m");
                 }
 
 
@@ -62,6 +66,7 @@ public class PlayerLogic {
         }
 
     }
+
     public boolean containsDigits(String text){
 
         for (char c : text.toCharArray()){

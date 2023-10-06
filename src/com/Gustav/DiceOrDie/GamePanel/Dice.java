@@ -15,6 +15,7 @@ import java.util.Random;
  *
  *
  */
+
 public class Dice {
 
     public Random random;
@@ -27,8 +28,9 @@ public class Dice {
 
     public int roll() {
 
-        return random.nextInt(10) + 1;
+        return random.nextInt(1) + 1;
     }
+
     public int numDice() {
 
         GetData sc = new GetData();

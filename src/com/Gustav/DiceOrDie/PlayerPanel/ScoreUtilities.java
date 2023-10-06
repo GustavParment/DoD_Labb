@@ -8,7 +8,9 @@ package com.Gustav.DiceOrDie.PlayerPanel;
  * The displayScore() will simply display the scores in the console.
  *
  */
+
 public class ScoreUtilities {
+
     public int getHighestScorePlayer(int[] score) {
 
         int highestScore = score[0];

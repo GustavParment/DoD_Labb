@@ -14,7 +14,9 @@ import com.Gustav.DiceOrDie.PlayerPanel.ScoreUtilities;
  * The reRoll() simply checks if there are players with the same score
  * and if that is the case the players with same score will re roll one more round.
  */
+
 public class GameLogic {
+
     public void newGame(PlayerLogic get) {
 
         int[] playerScores = new int[get.playerAmount];
@@ -43,7 +45,7 @@ public class GameLogic {
                         + "\u001B[0m"+ " to Dice or " +
                         "\u001B[31m" + "Die!!!" + "\u001B[0m");
 
-                sc.getArray();
+                sc.getStringArray();
 
                 int diceRoll = dice.roll();
                 System.out.println(playerNames[i] + " rolled: " + diceRoll);
@@ -78,8 +80,8 @@ public class GameLogic {
 
         }else if (playerAmount == 2){
 
-            System.out.println("\n" + playerNames[highestScorePlayer] + " is the winner and will "+"\u001b[31"
-                    +"execute " + playerNames[lowestScorePlayer] );
+            System.out.println("\n" + playerNames[highestScorePlayer] + " is the winner and will "+"\u001B[31m"
+                    +"execute "+"\u001b[0m" + playerNames[lowestScorePlayer] );
 
 
 
@@ -112,7 +114,7 @@ public class GameLogic {
                 System.out.print("\n"+playerNames[i] +
                         " press "+"\u001B[36m" + "ENTER" + "\u001B[0m" + " to re-roll");
 
-                sc.getArray();
+                sc.getStringArray();
 
                 int diceRoll = dice.roll();
                 System.out.println("\n"+ playerNames[i] + " rolled: " + diceRoll);
@@ -123,14 +125,14 @@ public class GameLogic {
 
         }if (playerAmount == 2){
 
-            System.out.println(playerNames[highestScore] + " is the winner and will "+"\u001b[31m"
-                    +"execute " + "\u001B[0m" + playerNames[lowestScorePlayer] );
+            System.out.println(playerNames[highestScore] + " is the final winner and will " +
+                    "\u001b[31m" + " execute" + "\u001b[0m" + playerNames[lowestScorePlayer] );
 
 
 
         }else {
 
-            System.out.println(playerNames[highestScorePlayer] + " is the winner and will" +
+            System.out.println(playerNames[highestScorePlayer] + " is the final winner and will" +
                     "\u001b[31m" + " execute" + "\u001b[0m" + " the other players! ");
 
 

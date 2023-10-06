@@ -9,7 +9,9 @@ import com.Gustav.DiceOrDie.Input.GetData;
  * The containsDigits() will check if the user inputs chars that contains digits.
  *
  */
+
 public class PlayerLogic {
+
     GetData sc = new GetData();
 
     public int playerAmount;
@@ -18,7 +20,9 @@ public class PlayerLogic {
     public PlayerLogic(){
 
         getPlayerAmount();
+
         sc.getString();
+
         getPlayerNames();
 
     }

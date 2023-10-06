@@ -7,7 +7,9 @@ import java.util.Scanner;
  * It contains 4 methods getArray(), getInteger() and getString().
  * These methods will get the data type when they ar called upon
  */
+
 public class GetData {
+
     public Scanner getData;
 
     public GetData() {
@@ -16,7 +18,7 @@ public class GetData {
 
     }
 
-    public String[] getArray() {
+    public String[] getStringArray() {
 
         return new String[]{getData.nextLine()};
     }

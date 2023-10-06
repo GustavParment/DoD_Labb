@@ -28,7 +28,7 @@ public class Dice {
 
     public int roll() {
 
-        return random.nextInt(1) + 1;
+        return random.nextInt(10) + 1;
     }
 
     public int numDice() {

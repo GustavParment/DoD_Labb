@@ -2,6 +2,7 @@ package com.Gustav.DiceOrDie;
 
 import com.Gustav.DiceOrDie.GamePanel.DiceGame;
 
+
 /**<font COLOR=#ffffff>
  * Dice or Die!
  * This is a die game where the users will roll for there lives.
@@ -11,7 +12,6 @@ import com.Gustav.DiceOrDie.GamePanel.DiceGame;
  * Are you brave enough to play?
  * The choice is yours to either Dice or Die?
  */
-
 public class Main {
     public static void main(String[] args) {
 

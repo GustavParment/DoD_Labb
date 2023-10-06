@@ -22,6 +22,7 @@ public class PlayerLogic {
         getPlayerNames();
 
     }
+
     public void getPlayerAmount(){
         do {
 
@@ -38,6 +39,7 @@ public class PlayerLogic {
 
         } while (playerAmount >= 5 || playerAmount < 2);
     }
+
     public void getPlayerNames() {
 
         playerNames = new String[this.playerAmount];
@@ -62,11 +64,13 @@ public class PlayerLogic {
         }
 
     }
+
     public boolean containsDigits(String text){
 
         for (char c : text.toCharArray()){
 
             if (Character.isDigit(c)){
+
                 return true;
             }
         }

@@ -2,6 +2,7 @@ package com.Gustav.DiceOrDie.GamePanel;
 
 import com.Gustav.DiceOrDie.Input.GetData;
 
+
 import java.util.Random;
 
 /**<font COLOR=#ffffff>
@@ -16,6 +17,7 @@ import java.util.Random;
  *
  */
 public class Dice {
+
     public Random random;
 
     public Dice() {
@@ -28,6 +30,7 @@ public class Dice {
 
         return random.nextInt(10) + 1;
     }
+
     public int numDice() {
 
         GetData sc = new GetData();
@@ -38,4 +41,5 @@ public class Dice {
         return numDice;
 
     }
+
 }

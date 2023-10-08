@@ -1,6 +1,7 @@
 package com.Gustav.DiceOrDie.Input;
 
 import java.util.Scanner;
+
 /**<font COLOR=#ffffff>
  *The GetData class. This class is instantiated with the Scanner class.
  * The purpose of this class is that it can be used similar to a Scanner.
@@ -18,9 +19,9 @@ public class GetData {
 
     }
 
-    public String[] getStringArray() {
+    public void getStringArray() {
 
-        return new String[]{getData.nextLine()};
+        getData.nextLine();
     }
 
     public int getInteger() {
@@ -38,5 +39,7 @@ public class GetData {
 
         return getData.nextLine();
     }
+
+
 }
 

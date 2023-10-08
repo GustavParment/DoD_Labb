@@ -28,17 +28,35 @@ public class Dice {
 
     public int roll() {
 
-        return random.nextInt(10) + 1;
+        return random.nextInt(6) + 1;
     }
 
     public int numDice() {
 
-        GetData sc = new GetData();
+        int diceAmount;
 
-        System.out.print("Enter amount of dice: ");
-        int numDice = sc.getInteger();
+        do {
 
-        return numDice;
+            GetData sc = new GetData();
 
+            System.out.print("Enter amount of dice: ");
+            diceAmount = sc.getInteger();
+
+            if (diceAmount <= 0) {
+
+                System.out.println("\u001B[31m"+"You need at least 1 die to play..."+"\u001B[0m");
+            }
+            else{
+
+                break;
+
+            }
+
+
+
+        } while (diceAmount <= 0);
+
+        return diceAmount;
     }
+
 }

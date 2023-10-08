@@ -22,8 +22,6 @@ class ScoreUtilitiesTest {
 
 
 
-
-
             }
         }
         System.out.println(highestScorePlayer);

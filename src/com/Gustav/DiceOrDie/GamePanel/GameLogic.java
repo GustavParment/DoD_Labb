@@ -41,7 +41,7 @@ public class GameLogic {
             System.out.println("\u001B[34m"+"\nThrow dice "+ round + "\u001B[0m");
 
             for (int i = 0; i < playerAmount; i++) {
-                System.out.println("\n" + playerNames[i] + " press "+"\u001B[36m" + "ENTER"
+                System.out.print("\n" + playerNames[i] + " press "+"\u001B[36m" + "ENTER"
                         + "\u001B[0m"+ " to Dice or " +
                         "\u001B[31m" + "Die!!!" + "\u001B[0m");
 
@@ -50,6 +50,7 @@ public class GameLogic {
                 int diceRoll = dice.roll();
                 System.out.println(playerNames[i] + " rolled: " + diceRoll);
                 score[i] += diceRoll;
+
             }
         }
 
@@ -117,7 +118,7 @@ public class GameLogic {
                 sc.getStringArray();
 
                 int diceRoll = dice.roll();
-                System.out.println("\n"+ playerNames[i] + " rolled: " + diceRoll);
+                System.out.println(playerNames[i] + " rolled: " + diceRoll);
                 score[i] += diceRoll;
 
 
@@ -125,12 +126,15 @@ public class GameLogic {
 
         }if (playerAmount == 2){
 
-            System.out.println(playerNames[highestScore] + " is the final winner and will " +
-                    "\u001b[31m" + " execute" + "\u001b[0m" + playerNames[lowestScorePlayer] );
+
+            System.out.println(playerNames[highestScore] + " is the final winner and will" +
+                    "\u001b[31m" + " execute " + "\u001b[0m" + playerNames[lowestScorePlayer] );
+
 
 
 
         }else {
+
 
             System.out.println(playerNames[highestScorePlayer] + " is the final winner and will" +
                     "\u001b[31m" + " execute" + "\u001b[0m" + " the other players! ");

@@ -10,7 +10,8 @@ import org.junit.jupiter.api.Test;
 class DiceTest {
 
     @Test
-    void checkRollScore() {
+    void checkRollScoreNot0() {
+
         Dice dice = new Dice();
 
         for (int i = 0; i < 10 ; i++) {

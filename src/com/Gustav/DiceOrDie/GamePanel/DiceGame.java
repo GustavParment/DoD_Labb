@@ -20,18 +20,21 @@ public class DiceGame {
 
     }
 
-    private void restartOption(){
+    private void restartOptionMessage(){
 
-        System.out.print("\u001B[35m" + "To start a new game type " + "\u001B[33m" + "new game"+ "\u001B[0m"+
-                "\u001b[35m" +" or press "+
-                "\u001B[36m" + "ENTER" + "\u001B[0m" + "\u001B[35m" + " to exit: " +"\u001B[0m");
+        System.out.print("\u001B[35m" + "\nTo start a new game type " + "\u001B[33m" + "New game"+ "\u001B[0m"+
+                "\u001b[35m" +" or type "+
+                "\u001B[36m" + "Exit" + "\u001B[0m" + "\u001B[35m" + " to exit: " +"\u001B[0m");
+
+
 
     }
 
     private void startOptionMessage(){
 
         System.out.print("Welcome to" + "\u001b[31m" + " Dice or Die!"+"\u001b[0m"+
-                "\u001B[35m" + "\nType "+"\u001B[33m" + "S"+"\u001B[0m" + "\u001B[35m" + " to start or press " + "\u001B[36m" + "ENTER"
+                "\u001B[35m" + "\nType "+"\u001B[33m" + "S"+"\u001B[0m" + "\u001B[35m" + " to start or press "
+                + "\u001B[36m" + "Exit"
                 + "\u001B[0m"+ "\u001B[35m"+" to exit: " + "\u001b[0m");
 
 
@@ -57,7 +60,7 @@ public class DiceGame {
 
                 game.newGame(play);
 
-                restartOption();
+                restartOptionMessage();
 
                 restartGame = sc.getString();
 

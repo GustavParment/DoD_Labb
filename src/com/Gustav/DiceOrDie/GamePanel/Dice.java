@@ -12,6 +12,8 @@ import java.util.Random;
  * When it's called upon, the method will act as a rolling dice.
  * The numDice().
  * When it's called upon, it will ask the user how many dice the user wants to play with.
+ * You need to at least play with 1 die. If the user enter a negative number it will print
+ * a massage telling the user to re enter a positive value.
  *
  *
  */
